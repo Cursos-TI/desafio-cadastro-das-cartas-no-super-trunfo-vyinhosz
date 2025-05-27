@@ -1,22 +1,70 @@
 #include <stdio.h>
+// Definimos uma estrutura chamada "Carta" que representa os dados de uma cidade
+typedef struct {
+int populacao;
+float area;
+float pib;
+int pontos_turisticos;
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+} Carta;
+
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+//tipos de variaveis para armazenar os dados das duas cartas
+
+    Carta carta1;
+    Carta carta2;
+
+//dados da primeira carta
+
+printf ("Cadastro da carta 1\n");
+printf("População: ");
+scanf("%d", &carta1.populacao); //lendo um numero inteiro da população
+
+printf("Área (km²):");
+scanf("%f", &carta1.area); //lendo um numero decimal da area
+
+printf("PIB (em bilhões): ");
+scanf("%f", &carta1.pib); //lendo um numero em decial do pib
+
+printf("Números de pontos turísticos: ");
+scanf("%d", carta1.pontos_turisticos);
+
+
+//dados da segunda carta
+
+printf ("Cadastro da carta 2\n");
+printf("População: ");
+scanf("%d", &carta2.populacao); //lendo um numero inteiro da população segunda carta
+
+printf("Área (km²):");
+scanf("%f", &carta2.area); //lendo um numero decimal da area segunda carta
+
+printf("PIB (em bilhões): ");
+scanf("%f", &carta2.pib); //lendo um numero em decial do pib segunda carta
+
+printf("Números de pontos turísticos: ");
+scanf("%d", &carta2.pontos_turisticos); //lendo numero inteiro de pontos turisticos da segunda carta
+
+//mostrar dados da primeira carta
+
+printf("\n Dados da Carta 1\n");
+printf("População: %d\n", carta1.populacao);
+printf("Área: %.2f km²\n", carta1.area);
+printf("PIB: %.2F bilhões\n", carta1.pib);
+printf("Pontos Turísticos: %d\n", carta1.pontos_turisticos);
+
+//mostrar dados da segunda carta
+
+
+printf("\n Dados da Carta 2\n");
+printf("População: %d\n", carta2.populacao);
+printf("Área: %.2f km²\n", carta2.area);
+printf("PIB: %.2F bilhões\n", carta2.pib);
+printf("Pontos Turísticos: %d\n", carta2.pontos_turisticos);
+
+
+//cabô
     return 0;
 }
